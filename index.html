@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirection...</title>
+  <script>
+    window.onload = function () {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        // Android
+        window.location.href = "https://play.google.com/store/apps/details?id=cm.iservice.compte_iservice&pcampaignid=web_share";
+      } 
+      else if (/iPhone|iPad|iPod|Mac/i.test(userAgent)) {
+        // iOS ou Mac
+        window.location.href = "https://apps.apple.com/cm/app/molo-molo/id6502276147";
+      } 
+      else {
+        // Par défaut (autres appareils : Windows, Linux, etc.)
+        window.location.href = "https://play.google.com/store/apps/details?id=cm.iservice.compte_iservice&pcampaignid=web_share";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirection en cours...</p>
+</body>
+</html>
